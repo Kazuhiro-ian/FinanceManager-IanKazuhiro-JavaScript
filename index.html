@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Manager | Ian Kazuhiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mensagemErro" id="mensagemErro"></div>
+    <header>
+        <div class="tituloHeader">
+            <h1>Finance Manager</h1>
+        </div>
+    </header>
+    <main>
+        <section class="informacoes">
+            <div class="saldo" >
+                <h2>Saldo</h2>
+                <p id="saldo"></p>
+            </div>
+            <div class="receitas" >
+                <h2>Receitas</h2>
+                <p id="totalReceitas"></p>
+            </div>
+            <div class="despesas" >
+                <h2>Despesas</h2>
+                <p id="totalDespesas"></p>
+            </div>
+        </section>
+        <section class="novaTransacao">
+            <div class="tituloTransacao">
+                <h2>Nova Transação</h2>
+            </div>
+            <form id="formularioTransacao">
+                <div class="inputControl">
+                    <label for="descricao">Descrição</label>
+                    <input type="text" id="descricao" required>
+                </div>
+                <div class="inputControl">
+                    <label for="valor">Valor:</label>
+                    <input type="number" id="valor" required>
+                </div>
+                <div class="inputControl">
+                    <label for="tipo">Tipo:</label>
+                    <select name="tipo" id="tipo">
+                        <option value="Receita">Receita</option>
+                        <option value="Despesa">Despesa</option>
+                    </select>
+                </div>
+                <div class="inputControl">
+                    <label for="data">Data:</label>
+                    <input type="date" id="data">
+                </div>
+                <div class="submitBtn">
+                    <button type="submit">Adicionar!</button>
+                </div>
+            </form>
+        </section>
+        <section class="historico">
+            <div class="tituloHistorico">
+                <h2>Histórico</h2>
+            </div>
+            <ul class="listaTransacoes" id="listaTransacoes">
+
+            </ul>
+        </section>
+    </main>
+    <script src="script2.js"></script>
+</body>
+</html>

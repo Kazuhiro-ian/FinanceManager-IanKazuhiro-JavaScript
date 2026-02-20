@@ -1,0 +1,218 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Corpo da página */
+body {
+    background-color: #121212; 
+    color: #E0E0E0; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #1E2A38; 
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+header h1 {
+    color: #E0E0E0;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+/* Mensagem de erro */
+.mensagemErro {
+    text-align: center;
+    background-color: #B00020; 
+    color: #fff;
+    padding: 10px;
+    margin: 10px auto;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 5px;
+    display: none; 
+}
+
+/* Seções principais */
+main {
+    flex: 1;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Resumo financeiro */
+.informacoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.informacoes div {
+    background-color: #1E2A38;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.informacoes h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #A0C4FF; 
+}
+
+.informacoes p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.saldoPositivo {
+    color: #4CAF50; 
+}
+
+.saldoNegativo {
+    color: #FF5252; 
+}
+
+/* Nova transação */
+.novaTransacao {
+    background-color: #1E2A38;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.novaTransacao h2 {
+    margin-bottom: 15px;
+    color: #A0C4FF;
+}
+
+.inputControl {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputControl label {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #C0C0C0;
+}
+
+.inputControl input,
+.inputControl select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2A3A4B;
+    color: #E0E0E0;
+    font-size: 1rem;
+}
+
+.inputControl input:focus,
+.inputControl select:focus {
+    outline: 2px solid #4A90E2; 
+}
+
+/* Botão submit */
+.submitBtn {
+    text-align: right;
+}
+
+.submitBtn button {
+    padding: 10px 20px;
+    background-color: #4A90E2; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.submitBtn button:hover {
+    background-color: #357ABD; 
+}
+
+/* Histórico */
+.historico {
+    background-color: #1E2A38;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.historico h2 {
+    margin-bottom: 15px;
+    color: #A0C4FF;
+}
+
+.listaTransacoes {
+    list-style: none;
+}
+
+.listaTransacoes li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: #2A3A4B;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.listaTransacoes li h3 {
+    flex: 2;
+    font-size: 1rem;
+}
+
+.listaTransacoes li span {
+    flex: 1;
+    text-align: right;
+}
+
+/* Cores por tipo de transação */
+.liReceita {
+    border-left: 4px solid #4CAF50; 
+}
+
+.liDespesa {
+    border-left: 4px solid #FF5252; 
+}
+
+/* Botão remover transação */
+.listaTransacoes li button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #FF5252;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.listaTransacoes li button:hover {
+    background-color: #D32F2F;
+}
+
+/* Responsivo */
+@media(max-width: 768px) {
+    .informacoes {
+        flex-direction: column;
+    }
+}
